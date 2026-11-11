@@ -6,7 +6,7 @@ const Navbar = () => {
           Portofolio
         </h1>
       </div>
-      <ul className="menu flex items-center gap-10 fixed left-1/2 -top-10 -translate-x-1/2 opacity-0 lg:static lg:translate-x-0 lg:opacity-100">
+      <ul className="menu flex items-center gap-10 md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 -top-10 opacity-0 md:opacity-100 md:top-0">
         <li>
           <a href="#" className="text-lg font-medium">
             Beranda
