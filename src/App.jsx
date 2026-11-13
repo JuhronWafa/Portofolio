@@ -36,7 +36,7 @@ function App() {
               Download CV <i className="ri-download-line ri-lg"></i>
             </a>
             <a
-              href="#"
+              href="#project"
               className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600"
             >
               Lihat Project <i className="ri-arrow-down-line ri-lg"></i>
@@ -53,7 +53,7 @@ function App() {
       {/* Section Hero */}
 
       {/* Tentang Saya */}
-      <div className="tentang mt-32 py-10">
+      <div className="tentang mt-32 py-10" id="tentang">
         <div
           className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
           data-aos="fade-up"
@@ -147,7 +147,7 @@ function App() {
       {/* Tools */}
 
       {/* Project */}
-      <div className="Project mt-32 py-10">
+      <div className="Project mt-32 py-10" id="project">
         <h1
           className="text-center text-4xl font-bold mb-2"
           data-aos="fade-up"
@@ -205,7 +205,7 @@ function App() {
       {/* Project */}
 
       {/* Kontak */}
-      <div className="kontak mt-32 sm:p-10 p-0">
+      <div className="kontak mt-32 sm:p-10 p-0" id="kontak">
         <h1
           className="text-4xl mb-2 font-bold text-center"
           data-aos="fade-up"
