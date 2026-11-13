@@ -6,7 +6,7 @@ function App() {
     <>
       {/* Section Hero */}
       <div className="hero grid md:grid-cols-2 xl:gap-0 gap-6 grid-cols-1 items-center pt-10">
-        <div>
+        <div className="animate__animated animate__fadeInUp animate__delay-1s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
             <img
               src={DataImage.HeroImage}
@@ -46,7 +46,7 @@ function App() {
         <img
           src={DataImage.HeroImage}
           alt="Hero Image"
-          className="md:w-80 xl:w-107.5 md:ml-auto"
+          className="md:w-80 xl:w-107.5 md:ml-auto animate__animated animate__fadeInUp animate__delay-2s"
           loading="lazy"
         />
       </div>
@@ -54,7 +54,12 @@ function App() {
 
       {/* Tentang Saya */}
       <div className="tentang mt-32 py-10">
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg">
+        <div
+          className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-one="true"
+        >
           <img
             src={DataImage.HeroImage}
             alt="Image"
@@ -96,8 +101,21 @@ function App() {
 
         {/* Tools */}
         <div className="tools mt-32">
-          <h1 className="text-4xl/snug font-bold mb-4 ">Tools yang dipakai</h1>
-          <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50">
+          <h1
+            className="text-4xl/snug font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-one="true"
+          >
+            Tools yang dipakai
+          </h1>
+          <p
+            className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-one="true"
+          >
             Berikut ini beberapa tools yang biasa saya pakai untuk pembuatan
             Website ataupun Design
           </p>
@@ -106,6 +124,10 @@ function App() {
               <div
                 className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
                 key={tool.id}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={tool.dad}
+                data-aos-one="true"
               >
                 <img
                   src={tool.gambar}
@@ -126,13 +148,33 @@ function App() {
 
       {/* Project */}
       <div className="Project mt-32 py-10">
-        <h1 className="text-center text-4xl font-bold mb-2">Project</h1>
-        <p className="text-base/loose text-center opacity-50">
+        <h1
+          className="text-center text-4xl font-bold mb-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-one="true"
+        >
+          Project
+        </h1>
+        <p
+          className="text-base/loose text-center opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-one="true"
+        >
           Berikut ini beberapa proyek yang telah saya buat.
         </p>
         <div className="project-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listProyek.map((project) => (
-            <div key={project.id} className="p-4 bg-zinc-800 rounded-md">
+            <div
+              key={project.id}
+              className="p-4 bg-zinc-800 rounded-md"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={project.dad}
+              data-aos-one="true"
+            >
               <img src={project.gambar} alt="Project Image" loading="lazy" />
               <div>
                 <h1 className="text-2xl font-bold my-4">{project.nama}</h1>
@@ -164,8 +206,21 @@ function App() {
 
       {/* Kontak */}
       <div className="kontak mt-32 sm:p-10 p-0">
-        <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
-        <p className="text-base/loose text-center mb-10 opacity-50">
+        <h1
+          className="text-4xl mb-2 font-bold text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-one="true"
+        >
+          Kontak
+        </h1>
+        <p
+          className="text-base/loose text-center mb-10 opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-one="true"
+        >
           Mari terhubung dengan saya.
         </p>
         <form
@@ -173,6 +228,10 @@ function App() {
           method="POST"
           className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
           autoComplete="off"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+          data-aos-one="true"
         >
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
