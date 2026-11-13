@@ -1,22 +1,23 @@
 import DataImage from "./data";
-import { listTools } from "./data";
+import { listTools, listProyek } from "./data";
 
 function App() {
   return (
     <>
       {/* Section Hero */}
-      <div className="hero grid md:grid-cols-2 xl:gap-0 gap-6 grid-cols-1">
+      <div className="hero grid md:grid-cols-2 xl:gap-0 gap-6 grid-cols-1 items-center pt-10">
         <div>
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
             <img
               src={DataImage.HeroImage}
               alt="Hero Image"
               className="w-10 rounded-md"
+              loading="lazy"
             />
             <q>Giri Lusi Jalmo Tan Keno Kiniro.⭐</q>
           </div>
-          <div className="lg:w-fit">
-            <h1 className="text-3xl/tight lg:text-4xl/tight xl:text-5xl/tight font-bold mb-6 xl:whitespace-nowrap">
+          <div>
+            <h1 className="text-3xl/tight lg:text-4xl/tight xl:text-5xl/tight font-bold mb-6">
               Hi, Saya Mukhamad Juhron Wafa'
             </h1>
             <p className="text-base/loose mb-6 opacity-50">
@@ -46,6 +47,7 @@ function App() {
           src={DataImage.HeroImage}
           alt="Hero Image"
           className="md:w-80 xl:w-107.5 md:ml-auto"
+          loading="lazy"
         />
       </div>
       {/* Section Hero */}
@@ -57,6 +59,7 @@ function App() {
             src={DataImage.HeroImage}
             alt="Image"
             className="w-12 rounded-md mb-10 sm:hidden"
+            loading="lazy"
           />
           <p className="text-base/loose mb-10">
             Hi, perkenalkan saya Mukhamad Juhron Wafa', seorang Full Stack Web
@@ -71,6 +74,7 @@ function App() {
               src={DataImage.HeroImage}
               alt="Image"
               className="w-12 rounded-md sm:block hidden"
+              loading="lazy"
             />
             <div className="flex items-center gap-6">
               <div>
@@ -107,6 +111,7 @@ function App() {
                   src={tool.gambar}
                   alt="Tools Image"
                   className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900"
+                  loading="lazy"
                 />
                 <div>
                   <h4 className="font-bold">{tool.nama}</h4>
@@ -118,6 +123,34 @@ function App() {
         </div>
       </div>
       {/* Tools */}
+
+      {/* Project */}
+      <div className="Project mt-32 py-10">
+        <h1 className="text-center text-4xl font-bold mb-2">Project</h1>
+        <p className="text-base/loose text-center opacity-50">
+          Berikut ini beberapa proyek yang telah saya buat.
+        </p>
+        <div className="project-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listProyek.map((project) => (
+            <div key={project.id} className="p-4 bg-zinc-800 rounded-md">
+              <img src={project.gambar} alt="Project Image" loading="lazy" />
+              <div>
+                <h1 className="text-2xl font-bold my-4">{project.nama}</h1>
+                <p className="text-base/loose mb-4">{project.desk}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tools.map((tool, index) => (
+                    <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
+                  ))}
+                </div>
+                <div className="mt-8 text-center">
+                  <a href="#" className="bg-blue-600 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-500">Lihat Website</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Project */}
     </>
   );
 }
