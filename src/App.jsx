@@ -139,11 +139,21 @@ function App() {
                 <p className="text-base/loose mb-4">{project.desk}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, index) => (
-                    <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
+                    <p
+                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
+                      key={index}
+                    >
+                      {tool}
+                    </p>
                   ))}
                 </div>
                 <div className="mt-8 text-center">
-                  <a href="#" className="bg-blue-600 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-500">Lihat Website</a>
+                  <a
+                    href="#"
+                    className="bg-blue-600 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-500"
+                  >
+                    Lihat Website
+                  </a>
                 </div>
               </div>
             </div>
@@ -153,25 +163,59 @@ function App() {
       {/* Project */}
 
       {/* Kontak */}
-      <div className="kontak mt-32 p-10">
+      <div className="kontak mt-32 sm:p-10 p-0">
         <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
-        <p className="text-base/loose text-center mb-10 opacity-50">Mari terhubung dengan saya.</p>
-        <form action="https://formsubmit.co/juhronwafa876@gmail.com" method="POST" className="bg-zinc-800 p-10 w-fit mx-auto rounded-md" autoComplete="off">
+        <p className="text-base/loose text-center mb-10 opacity-50">
+          Mari terhubung dengan saya.
+        </p>
+        <form
+          action="https://formsubmit.co/juhronwafa876@gmail.com"
+          method="POST"
+          className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
+          autoComplete="off"
+        >
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Nama Lengkap</label>
-              <input type="text" name="nama" placeholder="Masukkan Nama..." className="border border-zinc-500 p-2 rounded-md" required />
+              <input
+                type="text"
+                name="nama"
+                placeholder="Masukkan Nama..."
+                className="border border-zinc-500 p-2 rounded-md"
+                required
+              />
             </div>
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Email</label>
-              <input type="email" name="email" placeholder="Masukkan Email..." className="border border-zinc-500 p-2 rounded-md" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Masukkan Email..."
+                className="border border-zinc-500 p-2 rounded-md"
+                required
+              />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="pesan" className="font-semibold">Pesan</label>
-              <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder="Pesan..." className="border border-zinc-500 p-2 rounded-md" required></textarea>
+              <label htmlFor="pesan" className="font-semibold">
+                Pesan
+              </label>
+              <textarea
+                name="pesan"
+                id="pesan"
+                cols="45"
+                rows="7"
+                placeholder="Pesan..."
+                className="border border-zinc-500 p-2 rounded-md"
+                required
+              ></textarea>
             </div>
             <div className="text-center">
-              <button type="submit" className="bg-blue-600 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-blue-500">Kirim Pesan</button>
+              <button
+                type="submit"
+                className="bg-blue-600 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-blue-500"
+              >
+                Kirim Pesan
+              </button>
             </div>
           </div>
         </form>
